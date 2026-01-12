@@ -1,0 +1,296 @@
+/*==================================================
+    BRIDGEMARK REFINED RESPONSIVE CSS
+====================================================*/
+
+/* --- 1. Tablet & Large Desktop Adjustments --- */
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 95%;
+  }
+  .header-text h2 {
+    font-size: 48px;
+  }
+}
+
+/* --- Refined Bootsnav & Header Mobile Fix --- */
+/* --- Optimized "Regular" Mobile Menu Fix --- */
+/* --- Refined Bootsnav & Header Mobile Fix --- */
+@media screen and (max-width: 992px) {
+  /* Standardize Menu Links (Regular Look) */
+  nav.navbar.bootsnav ul.nav > li > a {
+    padding: 12px 20px !important;
+    margin: 5px 10px !important;
+    border-radius: 5px;
+    background-color: transparent !important;
+    color: #18332f !important; /* Force Dark Teal */
+    text-align: left !important;
+    display: block;
+  }
+
+  nav.navbar.bootsnav .navbar-toggle {
+    background-color: #cb6015;
+    color: #fff;
+    float: right;
+    padding: 10px 15px;
+    margin-right: 0px;
+  }
+
+  /* Force Sub-menu to be expanded & Reset Text Color */
+  nav.navbar.bootsnav li.dropdown .dropdown-menu {
+    display: block !important;
+    position: relative !important;
+    float: none !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left;
+  }
+
+  /* Indent child items and force teal color */
+  nav.navbar.bootsnav .dropdown-menu > li > a {
+    padding: 10px 15px !important;
+    color: #18332f !important; /* Ensures text is NOT white */
+    background-color: transparent !important;
+    text-align: left !important;
+  }
+
+  /* ACTIVE STATE LOGIC: 
+     Only turns orange if it's the SPECIFIC active section or active service link */
+
+  /* Top-level active links */
+  nav.navbar.bootsnav ul.nav > li.active > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+  }
+
+  /* Specific Service sub-links */
+  nav.navbar.bootsnav .dropdown-menu > li.active-service > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+  }
+
+  /* Clear Arrows/Chevrons */
+  nav.navbar.bootsnav li.dropdown > a.dropdown-toggle:after {
+    display: none !important;
+  }
+
+  .welcome-hero {
+    min-height: 100vh !important; /* Forces hero to fill screen */
+    height: auto !important;
+    padding: 140px 0 80px;
+    background-position: 80% center; /* Adjusts image focus */
+  }
+
+  .sub-header {
+    padding: 30px 20px;
+  }
+  .sub-header h3 {
+    font-size: 28px;
+  }
+
+  .values-card {
+    margin-bottom: 40px;
+  }
+  .service-detail-header h2 {
+    font-size: 42px;
+  }
+}
+
+/* --- 4. Mobile Projects & Footer Scaling --- */
+@media screen and (max-width: 767px) {
+  /* Main Headings */
+  .header-text h2 {
+    font-size: 34px !important; /* Fixed size for standard mobile */
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-text p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-top: 15px !important;
+  }
+
+  .sub-header {
+    margin-top: 30px !important;
+    padding: 20px 15px !important;
+  }
+
+  .sub-header h3 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+  .services-intro h2 {
+    font-size: 32px !important;
+  }
+
+  /* Project Filter Buttons Layout */
+  .project-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .filter-btn {
+    flex: 1 1 40%;
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  /* 3D Flip Card Mobile Behavior */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  .project-card {
+    height: 550px;
+  } /* Increased height for mobile text wrap */
+
+  /* Disable automatic hover flip for touch to avoid double-triggers */
+  .project-card:hover .card-inner {
+    transform: none;
+  }
+
+  /* Enable flip strictly via JS .is-flipped class */
+  .card-inner.is-flipped {
+    transform: rotateY(180deg) !important;
+  }
+
+  /* Tap instruction */
+  .project-card::after {
+    content: "Tap to view details";
+    display: block;
+    font-size: 11px;
+    color: #cb6015;
+    margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* Footer Stacking */
+  .footer-main-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer-address,
+  .contact-info,
+  .footer-branding {
+    width: 100%;
+    text-align: center;
+  }
+  .membership-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values-content {
+    text-align: center;
+  }
+
+  .detail-navigation .col-xs-4 {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 15px;
+  }
+
+  .nav-next-link {
+    justify-content: center;
+  }
+
+  .values-card {
+    width: 50%; /* Strictly forces 2 cards per line */
+  }
+
+  .values h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .values-card h3 {
+    font-size: 16px;
+  }
+
+  .values-card p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  /* 1. Scale down the massive 54px heading */
+  .values-text h2 {
+    font-size: 32px !important; /* Scaled down from 54px */
+    line-height: 1.3 !important;
+  }
+
+  /* 2. Adjust the sub-line span */
+  .values-text h2 span {
+    font-size: 24px !important; /* Scaled down from 38px */
+    margin-top: 10px;
+  }
+
+  /* 3. Scale down the 38px h3 heading */
+  .values-text h3 {
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 4. Optimize paragraph text for mobile reading */
+  .values-text p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 20px 0 !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* 5. Adjust the container layout */
+  .values-more .col-lg-6 {
+    padding: 0 20px !important;
+    margin-left: 0 !important; /* Remove large offsets */
+    width: 100% !important;
+  }
+}
+
+/* --- 5. Small Phone Optimizations --- */
+@media screen and (max-width: 480px) {
+  .header-text h2 {
+    font-size: 28px !important; /* Extra small mobile scaling */
+  }
+
+  .welcome-hero {
+    padding-top: 120px !important; /* Adjust for smaller fixed headers */
+  }
+  .sub-header h3 {
+    font-size: 20px !important;
+  }
+
+  .btn-contact-orange {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Service Navigation Stacking */
+  .detail-navigation .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-next-link {
+    justify-content: center;
+  }
+
+  .contact-content {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .values-text h2 {
+    font-size: 28px !important;
+  }
+
+  .values-text h3 {
+    font-size: 22px !important;
+  }
+}

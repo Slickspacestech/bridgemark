@@ -1,0 +1,1474 @@
+/*==================================
+* Author        : "ThemeSine"
+* Template Name :  Browny  HTML Template
+* Version       : 1.0
+==================================== */
+
+/*==================================
+font-family: 'Poppins', sans-serif;
+==================================== */
+
+
+/*=========== TABLE OF CONTENTS ===========
+1.  General css (Reset code)
+2.  Header
+3.  Welcome-hero
+4.  Our Values
+5.  Education
+6.  Skill
+7.  Experience
+8.  Profiles
+9.  projects
+10. news
+11. Contact
+
+/*-------------------------------------
+		1.General css (Reset code)
+--------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color: #18332F;
+	background: #fff;
+    max-width:1920px;
+    margin:0 auto;
+	overflow-x:hidden;
+}
+
+.font-fustat {
+    font-family: "Fustat", sans-serif;
+}
+
+a,a:hover,a:active,a:focus {
+	display:inline-block;
+	text-decoration:none;
+	color: #6a708e;
+}
+h1,h2,h3,h4,h5,h6 { 
+	margin: 0;
+	color:#43485c;
+    font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	text-transform: capitalize;
+}
+p {
+	margin: 0;
+	line-height:1.8;
+	color:#43485c;
+	font-size:14px;
+	font-family: 'Poppins', sans-serif;
+}
+img{border:none;max-width:100%; height:auto;}
+ul{
+	padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+ul li {
+	list-style: none;
+	
+}
+select,input,textarea,button{box-shadow:none;outline:0!important;}
+button {background: transparent;border: 0;}
+
+html,body{
+    height: 100%;
+	position: relative;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.3s 0.3s ease; 
+  -moz-transition: opacity 0.3s 0.3s ease; 
+  -ms-transition: opacity 0.3s 0.3s ease; 
+  -o-transition: opacity 0.3s 0.3s ease; 
+  transition: opacity 0.3s 0.3s ease; 
+  opacity: 0;
+}
+
+.fix{position: relative;clear: both;}
+/*=============Style css=========*/
+
+/*-------------------------------------
+        2. Header
+--------------------------------------*/
+.top-area {
+    position: relative;
+    z-index: 9999;
+}
+@media (min-width: 1024px){}
+nav.navbar.bootsnav.no-background {
+    background-color: #fff;
+    border: none;
+}
+
+nav.navbar.bootsnav {
+    background-color: #fff;
+    border-bottom: transparent;
+    box-shadow: 0 3px 15px rgba(0,0,0,.2);
+}
+
+/*.navbar-brand*/
+.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
+    display: inline-block;
+    color: #cb6015;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 0px 57px;
+    text-transform: uppercase;
+}
+
+/*.navbar-brand*/
+.navbar-brand > img {
+    max-height: 60px;
+}
+
+/*.nav li*/
+nav.navbar.bootsnav ul.nav  {
+    margin: 10px 0;
+}
+/* 1. Base Link Style */
+nav.navbar.bootsnav ul.nav > li > a {
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    color: #18332F; /* Default dark color */
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 2. Hover & Active States (The Orange Background) */
+/* We group Hover and the .active class together for consistency */
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.active > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+    opacity: 1;
+}
+
+/* 3. The Focus Fix */
+/* This prevents the orange color from "sticking" after a click */
+nav.navbar.bootsnav ul.nav > li > a:focus {
+    background-color: transparent;
+    color: #18332F;
+    outline: none;
+}
+
+/* 4. Ensure Active state overrides Focus */
+/* If a link is active AND focused, it stays orange */
+nav.navbar.bootsnav ul.nav > li.active > a:focus {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+
+/* 5. Sticky Navbar Adjustments */
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
+    color: #18332F;
+}
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+
+/* 6. Dropdown & Cleanup */
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
+    content: "";
+}
+
+nav.navbar.bootsnav ul.nav > li.dropdown span {
+    font-size: 8px;
+    margin-left: 15px;
+}
+
+/* Remove background from focused links unless they are actually active */
+nav.navbar.bootsnav ul.nav > li > a:focus {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+/* Ensure the active class always wins */
+nav.navbar.bootsnav ul.nav > li.active > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+/*.nav li*/
+
+/*.menu-ui-design*/
+.menu-ui-design{overflow-y:scroll;height: 350px;}
+.menu-ui-design::-webkit-scrollbar {
+    width:5px;
+}
+.menu-ui-design::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 8px #000;
+}
+.menu-ui-design::-webkit-scrollbar-thumb {
+  background-color: #cb6015;
+}
+/*.menu-ui-design*/
+
+/*.navbar-toggle */
+nav.navbar.bootsnav .navbar-toggle {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #cb6015;
+    padding: 10px;
+    top: 0;
+}
+nav.navbar.bootsnav .navbar-toggle i{color: #fff;}
+/*.navbar-toggle */
+
+
+/* 1. Reset the dropdown container to be a solid block */
+.nav-stacked-menu .dropdown-menu {
+    background-color: #18332F !important; /* Dark Teal background */
+    padding: 0 !important; /* Removes the white padding around links */
+    margin: 0 !important;  /* Attaches it directly to the button */
+    border: none !important;
+    border-radius: 0 0 5px 5px !important; /* Rounded corners only at bottom */
+    min-width: 100%; /* Makes it at least as wide as the 'Services' button */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* 2. Style the individual list items */
+.nav-stacked-menu .dropdown-menu > li {
+    margin: 0 !important; /* Ensure no gaps between rows */
+}
+
+/* 3. Style the links inside the dark block */
+.nav-stacked-menu .dropdown-menu > li > a {
+    color: #ffffff !important;
+    padding: 15px 20px; /* Thick rows like your image */
+    text-align: center; /* Centered text */
+    font-weight: bold !important;
+    font-size: 14px;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle row divider */
+    background-color: transparent;
+    transition: background-color 0.2s;
+    display: block;
+}
+
+/* 4. The Orange Highlight (Hover and Active) */
+/* This makes the row turn orange exactly like your mockup */
+.nav-stacked-menu .dropdown-menu > li > a:hover,
+.nav-stacked-menu .dropdown-menu > li > a:focus,
+.nav-stacked-menu .dropdown-menu > li.active-service > a {
+    background-color: #cb6015 !important; /* Orange color */
+    color: #ffffff !important;
+}
+
+/* 5. Clean up the last row border */
+.nav-stacked-menu .dropdown-menu > li:last-child > a {
+    border-bottom: none !important;
+}
+
+/* 6. Rotate the Chevron and keep button orange when menu is open */
+.nav-stacked-menu.open > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+    border-radius: 5px 5px 0 0 !important; /* Flatten bottom corners when attached */
+}
+
+.nav-stacked-menu.open .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Keeps the top-level button orange when the dropdown is open OR active */
+.nav-stacked-menu.open > a,
+.nav-stacked-menu.active > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+
+/* Ensure the stacked rows look like your reference */
+.nav-stacked-menu .dropdown-menu > li.active-service > a {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+/*-------------------------------------
+        3.  Welcome-hero
+--------------------------------------*/
+.welcome-hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/about/welcome-banner.jpg)no-repeat;
+    transform: scaleX(-1);
+    background-size:cover;
+    background-position: center;
+    height:890px;
+}
+
+.welcome-hero:before{
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    background:rgba(5, 8, 19, 0.65);
+    width:100%;
+    height:100%;
+}
+
+.welcome-hero > .container {
+    transform: scaleX(-1);
+}
+/*.header-text-area*/
+.header-text h2 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.header-text h2 span {color: #cb6015;}
+.header-text p {
+    font-family: "Fustat", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 30px 0 30px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.sub-header {
+    border: 3px solid #cb6015;
+    border-radius: 20px;
+    padding: 30px 10px; 
+}
+
+.sub-header h3 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+.sub-header p {
+    font-size: 18px;
+    padding:0 45px;
+    margin: 0 0 20px 0;
+    line-height: 18px;
+}
+
+.sub-header a {
+    margin-top: 10px;
+    width: 110px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    color: #fff;
+    background: #cb6015;
+    border:1px solid #cb6015;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
+.sub-header a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#cb6015;border: 1px solid #cb6015;}
+/*.header-text-area*/
+
+/*-------------------------------------
+        4.  Our Values
+--------------------------------------*/
+.values {padding: 50px 0 50px; background-color: #0D5257; color: #fff;}
+.values h2 {
+    color: #fff;
+    font-size: 38px;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+/* --- Values Grid Stability --- */
+.flex-wrap-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    align-items: stretch; /* Forces all cards in a row to have equal height */
+}
+
+.values-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px !important; /* Reduced padding for mobile spacing */
+    float: none !important; /* Disables problematic Bootstrap floats */
+}
+
+/* Fix for overlapping or misaligned headers */
+.values-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 15px 0 10px;
+    width: 100%;
+    /* Remove the relative/transform positioning that breaks the grid */
+    position: static !important; 
+    left: auto !important;
+    transform: none !important;
+    white-space: normal !important; /* Allow text to wrap if necessary */
+}
+
+.values-card img {
+    max-width: 80px; /* Consistent icon size for mobile 2x2 grid */
+    height: auto;
+    border: 2px solid #cb6015;
+    border-radius: 8px;
+    display: block;
+}
+
+.values-card p{
+    font-size: 14px;
+    line-height: 1.2em;
+    color: #fff;
+}
+
+.values-card img {
+    display: block;
+    border: 2px solid #cb6015;
+    border-radius: 8px;
+}
+
+.values-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/about/our-values.jpg);
+    background-size:cover;
+    background-position: center;
+    height:700px;
+}
+
+.values-more:before{
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    background:rgba(5, 8, 19, 0.65);
+    width:100%;
+    height:100%;
+}
+
+.values-text h2 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.values-text h2 span {
+    color: #fff;
+    font-size: 38px;
+    display: block;
+}
+
+.values-text h3 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+.values-text p {
+    font-family: "Fustat", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 30px 0 30px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+/*-------------------------------------
+        8. Services Section Base
+--------------------------------------*/
+#services {
+    min-height: 600px; 
+    background: #0D2527; /* Dark Teal Base */
+    position: relative;
+    padding: 100px 0;
+    overflow-x: hidden; /* Critical for full-width banner */
+}
+
+.service-view {
+    width: 100%;
+    animation: serviceFadeIn 0.6s ease-out; /* Smooth fade when switching pages */
+}
+
+@keyframes serviceFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Intro Text & Headings --- */
+.services-intro h2 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.services-intro h3 {
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.services-intro p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.instruction-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 40px 0;
+}
+
+.service-cta h3 {
+    color: #fff;
+}
+
+/* --- Full-Width Breakout Banner --- */
+.services-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/about/projects.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+/* Unique elements for the 'Others' page */
+.detail-main-heading {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.btn-book-consultation {
+    background-color: #cb6015; /* Brand Orange */
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+    transition: background 0.3s ease;
+}
+
+.btn-book-consultation:hover {
+    background-color: #e06d1c;
+}
+
+.partner-info-box {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-info-box p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+/*-------------------------------------
+        Card Grid (Equal Height Logic)
+--------------------------------------*/
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* */
+}
+
+.services-grid > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-summary-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Stretches card to match row height */
+    border: 2px solid #cb6015; /* Brand Orange */
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+/* Stabilized Header (Prevents grid jumping) */
+.service-link {
+    text-decoration: none !important;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.service-link h4 {
+    background: #fff;
+    color: #0D2527;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    min-height: 75px; /* Fixed space for wrapped titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-link:hover h4 {
+    background-color: #cb6015 !important;
+    color: #fff !important;
+}
+
+.service-list {
+    flex-grow: 1; /* Pushes list to fill available card height */
+    list-style: none;
+}
+
+.service-list li {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-list li::before {
+    content: "•";
+    color: #fff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/*-------------------------------------
+        Sub-Page Detail Content
+--------------------------------------*/
+.service-detail-header h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.detail-item {
+    margin-bottom: 45px;
+    padding-right: 20px;
+}
+
+.detail-item h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.detail-item p {
+    color: #fff;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.btn-contact-orange {
+    background-color: #cb6015;
+    color: #fff !important;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/*-------------------------------------
+        STABILIZED Navigation (The Fix)
+--------------------------------------*/
+.detail-navigation {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    margin-top: 60px;
+    min-height: 80px; /* Constant vertical space */
+}
+
+/* Update the selector to include the center link */
+.nav-back-link, 
+.nav-next-link,
+.nav-center-link {
+    color: #cb6015 !important; /* Brand Orange */
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none !important; 
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap; 
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Ensure the center link also turns white on hover */
+.nav-back-link:hover, 
+.nav-next-link:hover,
+.nav-center-link:hover {
+    color: #fff !important;
+}
+
+/* Specific styling for the center link layout */
+.nav-center-link {
+    position: relative;
+    justify-content: center;
+}
+
+/* Moving icons without shifting text */
+.nav-back-link i {
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.nav-next-link i {
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.nav-back-link:hover i {
+    transform: translateX(-5px); /* Moves icon left smoothly */
+}
+
+.nav-next-link:hover i {
+    transform: translateX(5px); /* Moves icon right smoothly */
+}
+
+/*-------------------------------------
+        Stacked Dropdown Menu
+--------------------------------------*/
+.nav-stacked-menu .dropdown-menu {
+    background-color: #18332F !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 0 8px 8px !important;
+    min-width: 260px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.nav-stacked-menu .dropdown-menu > li > a {
+    color: #ffffff !important;
+    padding: 15px 20px ;
+    text-align: center ;
+    font-weight: 700 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.nav-stacked-menu .dropdown-menu > li.active-service > a,
+.nav-stacked-menu .dropdown-menu > li > a:hover {
+    background-color: #cb6015 !important; /* Persistent orange */
+    color: #fff !important;
+}
+/* --- Service Cards Grid --- */
+/* 1. The Grid Container */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+}
+
+/* 2. The Column Wrapper */
+.services-grid > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. The Service Card */
+.service-summary-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Forces the card to fill the full height of the column */
+    
+    border: 2px solid #cb6015;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+/* 4. The Bullet List */
+.service-list {
+    flex-grow: 1; /* Pushes the list to expand and fill the card space */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* --- Stabilized Card Headers (No Jumping) --- */
+.service-link {
+    text-decoration: none !important;
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.service-link h4 {
+    background: #fff;
+    color: #0D2527;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0; 
+    min-height: 75px; /* Ensures space for multi-line titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-link:hover h4 {
+    background-color: #cb6015 !important; /* Brand Orange hover */
+    color: #fff !important;
+}
+
+/* --- Bulleted Lists --- */
+
+.service-list li {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-list li::before {
+    content: "•"; /* Custom bullet point */
+    color: #fff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- Stacked Block Dropdown Menu --- */
+.nav-stacked-menu .dropdown-menu {
+    background-color: #18332F !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 0 8px 8px !important;
+    min-width: 260px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.nav-stacked-menu .dropdown-menu > li > a {
+    color: #ffffff !important;
+    padding: 15px 20px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-stacked-menu .dropdown-menu > li.active-service > a,
+.nav-stacked-menu .dropdown-menu > li > a:hover {
+    background-color: #cb6015 !important; /* Orange highlight */
+}
+
+/* --- Sub-Page Bottom Navigation --- */
+.detail-navigation {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    margin-top: 60px;
+    min-height: 80px; /* Reserves space to prevent vertical jumping */
+}
+
+/* Base Link Style */
+.nav-back-link, 
+.nav-next-link {
+    color: #cb6015 !important; /* Brand Orange */
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: color 0.3s ease; /* Transition ONLY color, not layout */
+}
+
+/* Next Link specific stabilization */
+.next-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 200px; /* Reserves horizontal space to prevent "snapping" */
+}
+
+.next-text-wrapper i {
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects without layout shifts */
+.nav-back-link:hover, 
+.nav-next-link:hover {
+    color: #fff !important; /* Change to white on hover */
+}
+
+.nav-next-link:hover i {
+    transform: translateX(5px); /* Smooth arrow movement without box jumping */
+}
+
+/*-------------------------------------
+        9. projects
+--------------------------------------*/
+/* --- Projects Section --- */
+.projects-section {
+    background-color: #f4f7f6; /* */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Filter Controls */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    border: none;
+    background: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #0d2527; /* Dark Teal */
+    color: #fff;
+}
+
+/* Responsive Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3D Flip Card Container */
+.project-card {
+    height: 400px; /* Ensures all cards match vertically */
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border: 2px solid #cb6015; /* Brand Orange */
+    border-radius: 15px;
+    background: #fff;
+}
+
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 13px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- FIXED IMAGE HEIGHT LOGIC --- */
+.img-container {
+    height: 220px; /* All images will be exactly this high */
+    width: 100%;
+    overflow: hidden;
+    background: #eee;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image to fill container without distortion */
+}
+
+.placeholder-bg {
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-image {
+    color: #666;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Front Face Content */
+.card-info {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #0d2527;
+}
+
+.location {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.card-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Back Face Content */
+.card-back {
+    background-color: #0d2527; 
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.card-back p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/*-------------------------------------
+        10. news
+--------------------------------------*/
+
+.news{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    background:url(../images/about/welcome-banner.jpg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:700px;
+}
+
+.news:before{
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    background:rgba(5, 8, 19, 0.65);
+    width:100%;
+    height:100%;
+}
+
+.news h2{
+    margin-top: 100px;
+    color: #fff;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.news h3{
+    margin-top: 50px;
+    color: #fff;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*-------------------------------------
+        11. Contact
+--------------------------------------*/
+
+.contact{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    background:url(../images/about/contact.jpg)no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.contact:before{
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    background:rgba(255, 255, 255, 0.35);
+    width:100%;
+    height:100%;
+}
+
+.contact-content {
+    background:rgba(255, 255, 255, 0.75);
+    padding: 50px 10px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.single-contact-box h2{
+    color: #000;
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.single-contact-box p{
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-form  .form-group {
+    margin-bottom: 20px;
+}
+.contact-form .form-control {
+    padding: 25px;
+    font-size: 14px;
+    border: 2px solid #0D2527;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: 0!important;
+    background: #fff;
+    color: #636a82;
+    resize: none;
+}
+
+/*--contct button--*/
+.contact-form .single-contact-btn {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:50px;
+    text-transform:capitalize;
+    margin-top: 3px;
+    background: #0D2527;
+    border: 1px solid #0D2527;
+    border-radius: 10px;
+    cursor:pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    -webkit-transition: .5s; 
+    -moz-transition:.5s; 
+    -ms-transition:.5s; 
+    -o-transition:.5s;
+    transition: .5s;
+}
+.contact-form .single-contact-btn .contact-btn ,
+.contact-form .single-contact-btn .contact-btn:focus {
+    margin-top:0px;
+    outline: 0 !important;
+    border:0;
+    color: #fff;
+    border-radius: 0px;
+    font-size:14px;
+    -webkit-transition: .5s; 
+    -moz-transition:.5s; 
+    -ms-transition:.5s; 
+    -o-transition:.5s;
+    transition: .5s;
+    
+}
+.single-contact-btn:hover{
+    background: #18332F;
+    border: 1px solid #18332F;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+/* Container to handle alignment */
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start; /* Aligns checkbox with the top of the text */
+    cursor: pointer;
+    font-size: 14px;
+    color: #000; /* Matches your contact section text color */
+    font-weight: normal;
+}
+
+/* Custom Checkbox Styling */
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 4px; /* Manual tweak to center with the first line of text */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Ensure the text doesn't look cramped */
+.checkbox-group span {
+    padding-top: 3px;
+    line-height: 1.4;
+}
+
+/*--contct button--*/
+
+/* contact-adress */
+.contact-add-head h3 {
+    font-size:  24px;
+    color:  #3c4258;
+}
+.contact-add-head p {
+    font-size:  16px;
+    text-transform: capitalize;
+    color:  #636a82;
+    font-weight:  300;
+    margin-top:  6px;
+}
+/* contact-adress */
+
+/*.contact-add-info */
+.contact-add-info { margin: 42px 0 52px;}
+.single-contact-add-info h3 {
+    color:  #636a82;
+    font-weight:  500;
+}
+.single-contact-add-info p {
+    color:  #999fb3;
+    font-size:  16px;
+    margin-top:  18px;
+}
+.single-contact-add-info {
+    margin-bottom:  26px;
+}
+/*.contact-add-info */
+
+/*hm-foot-icon*/
+/* --- Footer Section --- */
+.footer {
+    padding: 60px 0;
+    background: #fff; /* Based on image background */
+    color: #18332F;
+}
+
+.footer-main-content {
+    display: flex;
+    align-items: center; /* Vertically centers the three columns */
+    flex-wrap: wrap;
+}
+
+/* Left Column Styling */
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.footer-email {
+    text-decoration: underline !important;
+    color: #18332F !important;
+}
+
+.footer-social-links {
+    margin: 20px 0;
+}
+
+.footer-social-links a {
+    font-size: 28px;
+    margin-right: 20px;
+    color: #18332F;
+    transition: color 0.3s;
+}
+
+.privacy-link {
+    text-decoration: underline !important;
+    font-size: 16px;
+    color: #18332F !important;
+}
+
+/* Center Column Branding */
+.footer-main-logo {
+    max-width: 280px;
+    margin-bottom: 30px;
+}
+
+.membership-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.havan-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.havan-group img {
+    height: 40px;
+}
+
+.footer-vertical-line {
+    width: 1px;
+    height: 45px;
+    background: #18332F;
+}
+
+.havan-name {
+    font-size: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.membership-text {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    border-left: none;
+}
+
+/* Right Column Address */
+.footer-address {
+    text-align: right;
+}
+
+.footer-address h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+.footer-address p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-address, .contact-info {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .footer-main-content {
+        flex-direction: column;
+    }
+}
+/*===============================
+    Scroll Top
+===============================*/
+#scroll-Top  .return-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    background:#cb6015;
+	border:1px solid #cb6015;
+	border-radius:50%;
+	-webkit-transition: .5s; 
+	-moz-transition:.5s; 
+	-ms-transition:.5s; 
+	-o-transition:.5s;
+    transition: .5s;
+	z-index: 2;
+}
+#scroll-Top  .return-to-top:hover {
+    background:#fff;
+    color: #b636ff;
+	border:1px solid #b636ff;
+}
+
+#scroll-Top  .return-to-top i{
+    position:relative;
+    bottom:0;
+
+}
+
+#scroll-Top  .return-to-top i{
+    position: relative;
+    animation-name: example;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration:1s;
+}
+@keyframes example {
+    0%   {bottom:0px;}
+    100%  {bottom:7px;}
+}
+/*========================Thank you=================
