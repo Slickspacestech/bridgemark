@@ -127,17 +127,25 @@ $(document).ready(function () {
     var originalBtnText = $(this).text();
 
     var formData = {
-      firstname: $("#firstname").val(),
-      lastname: $("#last").val(),
-      phone: $("#phone").val(),
-      email: $("#email").val(),
-      subject: $("#subject").val(),
-      message: $("#comment").val(),
+      firstname: $("#firstname").val().trim(),
+      lastname: $("#last").val().trim(),
+      phone: $("#phone").val().trim(),
+      email: $("#email").val().trim(),
+      subject: $("#subject").val().trim(),
+      message: $("#comment").val().trim(),
       signup: $("#signup").is(":checked") ? 1 : 0,
     };
 
-    if (!formData.firstname || !formData.lastname || !formData.email) {
+    // Validate required fields
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.phone) {
       alert("Please fill in all required fields marked with (*)");
+      return false;
+    }
+
+    // Basic email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address");
       return false;
     }
 
@@ -145,15 +153,24 @@ $(document).ready(function () {
 
     $.ajax({
       type: "POST",
-      url: "send_email.php",
-      data: formData,
+      url: "/.netlify/functions/contact-form",
+      data: JSON.stringify(formData),
+      contentType: "application/json",
       success: function (response) {
-        alert(response);
-        form[0].reset();
+        if (response.success) {
+          alert(response.message || "Thank you for contacting us! We will get back to you soon.");
+          form[0].reset();
+        } else {
+          alert(response.error || "An error occurred. Please try again later.");
+        }
         $(".contact-btn").text(originalBtnText);
       },
-      error: function () {
-        alert("An error occurred. Please try again later.");
+      error: function (xhr) {
+        var errorMessage = "An error occurred. Please try again later.";
+        if (xhr.responseJSON && xhr.responseJSON.error) {
+          errorMessage = xhr.responseJSON.error;
+        }
+        alert(errorMessage);
         $(".contact-btn").text(originalBtnText);
       },
     });

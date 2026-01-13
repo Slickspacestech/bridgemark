@@ -1,0 +1,18 @@
+[build]
+  # Directory with the Netlify functions
+  functions = "netlify/functions"
+
+  # Build command (not needed for static site, but required for Netlify)
+  command = "npm run build"
+
+  # Directory to publish (root since index.html is in root)
+  publish = "."
+
+# Redirect rules
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Environment variables (set these in Netlify UI)
+# SMTP2GO_API_KEY - Your SMTP2GO API key

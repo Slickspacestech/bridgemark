@@ -1,0 +1,12 @@
+{
+  "name": "bridgemark-website",
+  "version": "1.0.0",
+  "description": "Bridgemark Development landing page",
+  "scripts": {
+    "build": "echo 'No build step needed for static site'"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {}
+}
