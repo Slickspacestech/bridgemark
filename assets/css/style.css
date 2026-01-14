@@ -1012,7 +1012,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #fff;}
 
 /* 3D Flip Card Container */
 .project-card {
-    height: 400px; /* Ensures all cards match vertically */
+    height: 450px; /* Ensures all cards match vertically */
     perspective: 1000px;
 }
 
