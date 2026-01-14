@@ -137,7 +137,12 @@ $(document).ready(function () {
     };
 
     // Validate required fields
-    if (!formData.firstname || !formData.lastname || !formData.email || !formData.phone) {
+    if (
+      !formData.firstname ||
+      !formData.lastname ||
+      !formData.email ||
+      !formData.phone
+    ) {
       alert("Please fill in all required fields marked with (*)");
       return false;
     }
@@ -158,7 +163,10 @@ $(document).ready(function () {
       contentType: "application/json",
       success: function (response) {
         if (response.success) {
-          alert(response.message || "Thank you for contacting us! We will get back to you soon.");
+          alert(
+            response.message ||
+              "Thank you for contacting us! We will get back to you soon."
+          );
           form[0].reset();
         } else {
           alert(response.error || "An error occurred. Please try again later.");
@@ -176,36 +184,51 @@ $(document).ready(function () {
     });
   });
 
-  /*=========== 6. Projects Filtering ===========*/
-  $(".filter-btn").on("click", function () {
-    const filterValue = $(this).data("filter");
-    $(".filter-btn").removeClass("active");
-    $(this).addClass("active");
+  /*=========== Updated Projects Logic ===========*/
 
-    if (filterValue === "all") {
-      $(".project-card").stop().fadeIn(500);
-    } else {
-      $(".project-card").stop().hide();
-      $('.project-card[data-category="' + filterValue + '"]')
-        .stop()
-        .fadeIn(500);
-    }
+  // 1. Page Navigation on the back of the card
+  $(document).on("click", ".change-page-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation(); // Stops the card from flipping shut
+
+    const targetPage = parseInt($(this).data("page"));
+    const $wrapper = $(this).closest(".back-pages-wrapper");
+
+    // Slide calculation: moves the entire track left
+    const offset = (targetPage - 1) * 100;
+    $wrapper.css("transform", "translateX(-" + offset + "%)");
   });
 
-  /*=========== 7. Mobile Adjustments (Touch & Auto-Close) ===========*/
+  // 2. Main Flip Trigger
+  $(".project-card").on("click", function (e) {
+    // Ignore if clicking a navigation button
+    if ($(e.target).closest(".change-page-btn").length) return;
 
-  // Project Card Tap to Flip
-  const isTouchDevice =
-    "ontouchstart" in window || navigator.maxTouchPoints > 0;
-  if (isTouchDevice) {
-    $(".project-card").on("click", function () {
-      $(this).find(".card-inner").toggleClass("is-flipped");
-      $(".project-card")
-        .not(this)
-        .find(".card-inner")
-        .removeClass("is-flipped");
-    });
-  }
+    const $inner = $(this).find(".card-inner");
+    const $wrapper = $(this).find(".back-pages-wrapper");
+
+    $inner.toggleClass("is-flipped");
+
+    // Reset to Page 1 when flipping closed
+    if (!$inner.hasClass("is-flipped")) {
+      setTimeout(() => {
+        $wrapper.css("transform", "translateX(0%)");
+      }, 500);
+    }
+
+    // Auto-close other cards
+    $(".project-card").not(this).find(".card-inner").removeClass("is-flipped");
+  });
+  // Desktop Hover Protection: Reset page state when mouse leaves
+  $(".project-card").on("mouseleave", function () {
+    const $wrapper = $(this).find(".back-pages-wrapper");
+    const $inner = $(this).find(".card-inner");
+
+    // Only reset if the card isn't manually flipped (for hybrid devices)
+    if (!$inner.hasClass("is-flipped")) {
+      $wrapper.css("transform", "translateX(0%)").data("currentIndex", 0);
+    }
+  });
 
   // Auto-close Hamburger menu
   $(document).on("click", ".navbar-collapse a", function () {
